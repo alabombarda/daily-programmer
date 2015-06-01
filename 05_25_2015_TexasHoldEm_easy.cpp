@@ -120,7 +120,7 @@ void Deck::shuffle()
 {
     this->inDeck.reserve(this->inDeck.size() + this->discarded.size());
     this->inDeck.insert(this->inDeck.end(), this->discarded.begin(), this->discarded.end());
-
+    //clear discard pile
     std::random_shuffle(this->inDeck.begin(), this->inDeck.end());
 }
 
